@@ -1,5 +1,4 @@
-:root{--bg:#f6f6f4;--ink:#161616;--mute:#6b6b6b;--line:#dcdcd8;--acc:#2a3cff;--card:#fff}
-@media (prefers-color-scheme:dark){:root{--bg:#121212;--ink:#f2f2f0;--mute:#9a9a9a;--line:#2c2c2c;--acc:#7b88ff;--card:#1b1b1b}}
+:root{--bg:#121212;--ink:#f2f2f0;--mute:#9a9a9a;--line:#2c2c2c;--acc:#7b88ff;--card:#1b1b1b;color-scheme:dark}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "DM Sans",system-ui,sans-serif}
 header,main{max-width:960px;margin:0 auto;padding:0 20px}
