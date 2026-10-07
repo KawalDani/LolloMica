@@ -40,3 +40,9 @@ dialog{border:0;background:transparent;padding:0;max-width:94vw;max-height:94vh}
 dialog::backdrop{background:rgba(0,0,0,.85)}
 dialog img{max-width:94vw;max-height:86vh;display:block;margin:0 auto}
 #lbx{display:block;margin:10px auto 0;background:var(--card);border:0;border-radius:6px;padding:8px 18px;cursor:pointer}
+
+.count{display:flex;gap:28px;margin:0 0 32px;font-variant-numeric:tabular-nums}
+.count div{display:flex;flex-direction:column}
+.count b{font:800 clamp(32px,8vw,56px)/1 "Bricolage Grotesque",sans-serif;letter-spacing:-.03em}
+.count span{font-size:14px;color:var(--mute)}
+.count.done{font:800 clamp(24px,6vw,40px)/1.1 "Bricolage Grotesque",sans-serif;color:var(--acc)}
