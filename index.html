@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lollomica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>lollomica</h1>
+  <p class="sub">Il compleanno di Lorenzo. Carica una foto, vota la migliore, scrivigli una lettera.</p>
+  <nav>
+    <button class="tab on" data-tab="foto">Foto</button>
+    <button class="tab" data-tab="lettere">Lettere</button>
+  </nav>
+</header>
+
+<main>
+  <section id="foto">
+    <form id="upload">
+      <select name="category" aria-label="Tipo di foto">
+        <option value="festa">Della festa</option>
+        <option value="nel-tempo">Con Lorenzo nel tempo</option>
+      </select>
+      <input name="author" maxlength="40" placeholder="Il tuo nome (facoltativo)">
+      <input type="file" id="files" accept="image/*" multiple aria-label="Scegli le foto">
+      <button type="submit">Carica</button>
+    </form>
+    <p id="upmsg" class="msg" role="status"></p>
+
+    <div class="chips">
+      <button class="chip on" data-f="tutte">Tutte</button>
+      <button class="chip" data-f="festa">Festa</button>
+      <button class="chip" data-f="nel-tempo">Nel tempo</button>
+      <button class="chip" data-f="classifica">Classifica</button>
+    </div>
+    <div id="grid" class="grid"></div>
+  </section>
+
+  <section id="lettere" hidden>
+    <form id="letterForm">
+      <input name="author" maxlength="40" placeholder="Il tuo nome (facoltativo)">
+      <textarea name="body" id="body" maxlength="600" rows="4" required></textarea>
+      <button type="submit">Pubblica</button>
+    </form>
+    <p id="lmsg" class="msg" role="status"></p>
+    <div id="letters"></div>
+  </section>
+</main>
+
+<dialog id="lb"><img alt=""><button id="lbx" aria-label="Chiudi">Chiudi</button></dialog>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="app.js"></script>
+</body>
+</html>
