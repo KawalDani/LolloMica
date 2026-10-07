@@ -133,5 +133,17 @@ $("#letterForm").onsubmit = async (e) => {
   if (!error) { e.target.reset(); loadLetters(); }
 };
 
+// Countdown: mezzanotte del 19 ottobre 2026, ora italiana (CEST, +02:00)
+const TARGET = new Date("2026-10-19T00:00:00+02:00").getTime();
+function tick() {
+  const el = $("#count");
+  let s = Math.floor((TARGET - Date.now()) / 1000);
+  if (s <= 0) { el.className = "count done"; el.textContent = "Buon compleanno Lollo, vecchio di merda."; return; }
+  const v = [["giorni", Math.floor(s / 86400)], ["ore", Math.floor(s % 86400 / 3600)], ["minuti", Math.floor(s % 3600 / 60)], ["secondi", s % 60]];
+  el.innerHTML = v.map(([l, n]) => `<div><b>${String(n).padStart(2, "0")}</b><span>${l}</span></div>`).join("");
+  setTimeout(tick, 1000);
+}
+tick();
+
 loadPhotos();
 loadLetters();
