@@ -45,4 +45,4 @@ dialog img{max-width:94vw;max-height:86vh;display:block;margin:0 auto}
 .count b{font:800 clamp(32px,8vw,56px)/1 "Bricolage Grotesque",sans-serif;letter-spacing:-.03em}
 .count span{font-size:14px;color:var(--mute)}
 .count.done{font:800 clamp(24px,6vw,40px)/1.1 "Bricolage Grotesque",sans-serif;color:var(--acc)}
-input[name=author]{flex:1 1 260px;min-width:260px}
+input[name=author]{flex:1 1 100%;width:100%}
